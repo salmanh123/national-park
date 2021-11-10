@@ -1,0 +1,31 @@
+.park-item h1{
+    font-size: 20px;
+}
+
+.park-container{
+    width: 300px;
+    overflow: hidden;
+    padding: 30px;
+    margin: 10px;
+    font-family: 'Helvetica', Arial, Helvetica, sans-serif;
+    align-items: center;
+    background-color: #00A170;
+    border-radius: 15px;
+}
+.park-container:hover{
+    transform: scale(1.08);
+    background-color: rgb(154, 231, 189);
+}
+
+.park-item{
+    text-align: center;
+}
+
+.park-link{
+    text-align: center;
+}
+
+.park-link-tag{
+    text-decoration: underline;
+    color: #282D3C;
+}

@@ -1,0 +1,22 @@
+.web-image{
+    max-width: 400px;
+    
+}
+
+.webcam-page-text{
+    font-size: small;
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.webcam-img{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+
+.web-image-caption{
+    font-size: 10px;
+}

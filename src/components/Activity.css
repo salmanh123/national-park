@@ -1,0 +1,26 @@
+.card-container{
+    width: 300px;
+    overflow: hidden;
+    padding: 30px;
+    margin: 10px;
+    font-family: 'Helvetica', Arial, Helvetica, sans-serif;
+    align-items: center;
+    background-color: #00A170;
+    border-radius: 15px;
+}
+.card-container:hover{
+    transform: scale(1.08);
+    background-color: rgb(154, 231, 189);
+}
+
+.card-title{
+    text-align: center;
+}
+.link{
+    text-align: center;
+}
+.linkTag{
+    text-decoration: underline;
+    color: #282D3C;
+}
+

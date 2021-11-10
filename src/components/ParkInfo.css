@@ -1,0 +1,66 @@
+.webcam-div{
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    font-size: 10px;
+}
+.content-div{
+    display: flexbox;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.description-div{
+    display: flexbox;
+    padding: 0px 20px 20px;
+    margin: auto;
+    text-align: left;
+    max-width: 1000px;
+    border-radius: 20px;
+    border-style: outset;
+    
+}
+
+ h3{
+    font-size: 15px;
+}
+.weather-div{
+    display: flexbox;
+    padding: 0px 20px 20px;
+    margin: 10px auto;
+    text-align: left;
+    max-width: 1000px;
+    border-radius: 20px;
+    border-style: outset;
+}
+
+.fee-div{
+    display: flexbox;
+    padding: 0px 20px 20px;
+    margin: 10px auto;
+    text-align: left;
+    max-width: 1000px;
+    border-radius: 20px;
+    border-style: outset;
+}
+
+.fee-data{
+    
+    border-radius: 0px;
+    border-bottom: inset;
+}
+
+.things-to-do-div{
+    padding: 0px 20px 20px;
+    margin: 10px auto;
+    text-align: left;
+
+    display: flexbox;
+    width: 500px;
+    border-radius: 20px;
+    border-style: outset;
+}
+.things-to-do-div h3{
+    
+    line-height: 5px;
+}
+

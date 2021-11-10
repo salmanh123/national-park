@@ -1,0 +1,27 @@
+.parkHeader h1{
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    padding: 20px;
+    margin: 0 auto;
+    font-size: 50px;
+    
+    text-align: center;
+    background-color: #E15D44;
+    border-radius: 20px;
+}
+.parkHeader{
+    padding: 30px;
+    align-items: center;
+    margin: 0 auto;
+
+}
+
+.description{
+    display: flex;
+    
+    flex-direction: column;
+    padding: 0px 30px;
+    margin: 0;
+
+}
