@@ -1,6 +1,23 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Make sure you have Node.js installed
+2. Clone repo, run npm init, run npm install
+3. Run 'npm start build'
+4. https://national-park-salmanh.netlify.app/
+# Notes
+The webpage should display cards with activity names, these names will have links that
+take you to a page with cards containing parks associated with that activity. Clicking
+on a park will display basic information on that park.
+
+# Issues I came across
+1. Deploying the application
+2. Figuring routing out
+3. Figuring out how to use React.js
+4. Routing & API Calls
+
+# Future improvements
+1. Using less components & making code more "intuitive"
+2. Fixing routing issues with returning back as there seems to be issues with how backtracking pages work in my web-app
 
 ## Available Scripts
 
