@@ -1,14 +1,11 @@
 import React from "react";
+import { useState, useEffect} from "react";
 import Header from "./Header";
-import { useState, useEffect, Component } from "react";
-import ReactDom from "react-dom";
-import "./Home.css";
 import Activity from "./Activity";
-
+import "./Home.css";
 const Home = () => {
   // useEffect to fetch API data when page is loaded
   useEffect(() => {
-
     // fetchs api data, then logs yay if successful, else the error
     fetchItems()
       .then((response) => {
@@ -23,10 +20,10 @@ const Home = () => {
 
   // This method asynchronously calls the nps api on activities/parks to get the associated parks for the activities
   const fetchItems = async () => {
-    const parkActivityData = await fetch(
-      "https://developer.nps.gov/api/v1/activities/parks?api_key=nhAaNjq6XFeiFj0JmWbXkBrjJRc0uC2YcJCfTuKB"
-    );
-        // wait for the api data
+    const apiKey = process.env.REACT_APP_API_KEY;
+    const url = `https://developer.nps.gov/api/v1/activities/parks?api_key=${apiKey}`;
+    const parkActivityData = await fetch(url);
+    // wait for the api data
     const items = await parkActivityData.json();
     console.log(items.data);
     // set our parkItems to the API data
@@ -46,7 +43,7 @@ const Home = () => {
 
   return (
     <div className="test">
-        {/* Display Header component & map our park data with the .map function and a function passed in */}
+      {/* Display Header component & map our park data with the .map function and a function passed in */}
       <Header />
       <div className="activity-container">{parkItems.map(mapParkItem)}</div>
     </div>

@@ -1,12 +1,17 @@
 import React from "react";
 import { useEffect, useState } from "react";
-
 import WebcamHeader from "./WebcamHeader";
 import "./Webcam.css";
+
+
 const Webcam = (props) => {
+
+  // Wait for webcam data
   const [webcamData, setData] = useState([]);
   const parkName = props.match.params.parkName;
   const parkCode = props.match.params.parkCode;
+
+  // useEffect called when page rendered & calls method to fetch webcam data
   useEffect(() => {
     // fetchs api data, then logs yay if successful, else the error
     fetchWebcamData()
@@ -17,17 +22,27 @@ const Webcam = (props) => {
         console.log(err);
       });
   }, []);
+
+  // This async function will call the api for webcam data querying on the parkCode to 
+  // attempt to get webcam data for that park which is webcam images 
   const fetchWebcamData = async () => {
-    const url = `https://developer.nps.gov/api/v1/webcams?api_key=nhAaNjq6XFeiFj0JmWbXkBrjJRc0uC2YcJCfTuKB&parkCode=${parkCode}`;
+    // api key and url
+    const apiKey = process.env.REACT_APP_API_KEY;
+    const url = `https://developer.nps.gov/api/v1/webcams?api_key=${apiKey}&parkCode=${parkCode}`;
     const parkData = await fetch(url);
 
     const items = await parkData.json();
     const webcamItems = items.data;
-    console.log(webcamItems);
+    //console.log(webcamItems); 
+    // Set our useState item with the webcam data we receive
     setData(webcamItems);
   };
+
+  /* Method below is called from a map function passed in an element from returned 
+    webcam API data. It will display each image with their alttext if not able to*/
   const showImages = (imageData) => {
     return (
+      // Displays images
       <div className="webcam-img">
         {imageData["images"].map((images) => {
           return (

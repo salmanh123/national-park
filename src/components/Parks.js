@@ -23,9 +23,13 @@ const Parks = (props) => {
 
   // Asynchronously fetch API data from activites/parks while querying with the ID of the activity to get its specific parks
   const fetchParkActivity = async () => {
-    const parkActivityData = await fetch(
-      `https://developer.nps.gov/api/v1/activities/parks?api_key=nhAaNjq6XFeiFj0JmWbXkBrjJRc0uC2YcJCfTuKB&id=${activityID}`
-    );
+    const apiKey = process.env.REACT_APP_API_KEY;
+
+    // Create url 
+    const url = `https://developer.nps.gov/api/v1/activities/parks?api_key=${apiKey}&id=${activityID}`
+    
+    //  fetch & await for api data
+    const parkActivityData = await fetch(url);
 
     // Await for the parks associated with the activity to be sent to us
     const items = await parkActivityData.json();
